@@ -4,3 +4,14 @@ body {
 	 */
   font: 100%/1.5 system-ui;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    
+    margin: 0 15px; 
+}
