@@ -8,23 +8,26 @@ body {
   margin-inline: auto;
 
   background-color:oklch(93.854% 0.00645 197.959);
+  /*
+  color: white;
 
-    padding: 1rem;
+  background-image: url("image/bg1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+  */
 
-
+  padding: 1rem;
 }
 
-/* ------------------------------
-   Theme & Accent Color
------------------------------- */
+/*Theme*/
 html {
-  --color-accent: oklch(55.444% 0.12071 318.197);
+  --color-accent: skyblue;
   accent-color: var(--color-accent);
 }
 
-/* ------------------------------
-   Navigation Bar
------------------------------- */
+/*Navigation Bar*/
 nav ul,
 nav li {
   display: contents;
@@ -32,13 +35,15 @@ nav li {
 
 nav {
   position: fixed;
-  right: 20px;
+  right: 30px;
 
   z-index: 1000;
 
+  /*background-image: url("image/bg1.jpg");*/
+
   display: flex;
   margin-bottom: 1em;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom:  1px solid oklch(80% 3% 200);
 }
 
 nav a {
@@ -50,7 +55,7 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(85% 3% 200);
+  border-bottom: 0.4em solid oklch(11.832% 0.01628 195.225 / 0.344);
   padding-bottom: 0.1em;
 }
 
@@ -59,9 +64,7 @@ nav a:hover {
   background-color: oklch(from var(--color-accent) 95% 5% h);
 }
 
-/* ------------------------------
-   Contact Form Styling
------------------------------- */
+/*contact*/
 input,
 textarea,
 button {
@@ -89,9 +92,7 @@ form button {
   grid-column: 1 / -1;
 }
 
-/* ------------------------------
-   Projects Page Styling
------------------------------- */
+/*project*/
 
 .projects {
   display: grid;
@@ -106,11 +107,11 @@ form button {
   grid-row: span 3;
   gap: 1em;
   
-  border: 1px solid oklch(80% 3% 200);
+  border: 1px solid oklch(100% 0.00011 271.152 / 0.5);
   border-radius: 0.5em;
   padding: 1em;
-  box-shadow: 0 2px 4px oklch(90% 2% 200 / 0.5);
-  background-color: white;
+  box-shadow: 0 2px 4px oklch(100% 0.00011 271.152 / 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .projects img {
@@ -141,8 +142,9 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+/*Resume*/
 .header-row {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
 }
