@@ -101,6 +101,11 @@ form button {
 }
 
 .projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+  
   border: 1px solid oklch(80% 3% 200);
   border-radius: 0.5em;
   padding: 1em;
@@ -117,44 +122,14 @@ form button {
 
 .projects h2 {
   font-size: 1.2em;
-  margin-top: 0;
   color: var(--color-accent);
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1.5em;
-  margin-block: 2em;
-}
-
-.projects article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;        
-  gap: 1em;
-  border: 1px solid oklch(80% 3% 200);
-  border-radius: 0.5em;
-  padding: 1em;
-  box-shadow: 0 2px 4px oklch(90% 2% 200 / 0.5);
-  background-color: white;
-}
-
-.projects h2 {
   margin: 0; 
-  font-size: 1.2em;
-  color: var(--color-accent);
-}
-
-.projects img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .projects p {
   margin: 0;
 }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
