@@ -19,6 +19,7 @@ body {
   */
 
   padding: 1rem;
+
 }
 
 /*Theme*/
@@ -40,6 +41,7 @@ nav {
   z-index: 1000;
 
   /*background-image: url("image/bg1.jpg");*/
+  background-color:oklch(93.854% 0.00645 197.959);
 
   display: flex;
   margin-bottom: 1em;
