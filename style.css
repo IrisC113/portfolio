@@ -7,16 +7,6 @@ body {
   max-width: 100ch;
   margin-inline: auto;
 
-  background-color:oklch(93.854% 0.00645 197.959);
-  /*
-  color: white;
-
-  background-image: url("image/bg1.jpg");
-  background-position: center center;
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-  background-size: cover;
-  */
 
   padding: 1rem;
 
@@ -24,6 +14,8 @@ body {
 
 /*Theme*/
 html {
+  color-scheme: light dark;
+
   --color-accent: skyblue;
   accent-color: var(--color-accent);
 }
@@ -40,12 +32,11 @@ nav {
 
   z-index: 1000;
 
-  /*background-image: url("image/bg1.jpg");*/
-  background-color:oklch(93.854% 0.00645 197.959);
+  background: color-mix(in oklch, canvas, var(--color-accent) 10%);
 
   display: flex;
   margin-bottom: 1em;
-  border-bottom:  1px solid oklch(80% 3% 200);
+  border-bottom:  1px solid oklch(33.5% 0.00819 197.026);
 }
 
 nav a {
@@ -57,7 +48,7 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(11.832% 0.01628 195.225 / 0.344);
+  border-bottom: 0.4em solid oklch(0% 0 0 / 0.344);
   padding-bottom: 0.1em;
 }
 
@@ -95,7 +86,6 @@ form button {
 }
 
 /*project*/
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -109,10 +99,10 @@ form button {
   grid-row: span 3;
   gap: 1em;
   
-  border: 1px solid oklch(100% 0.00011 271.152 / 0.5);
+  border: 1px solid oklch(84.82% 0.07618 234.629 / 0.5);
   border-radius: 0.5em;
   padding: 1em;
-  box-shadow: 0 2px 4px oklch(100% 0.00011 271.152 / 0.5);
+  box-shadow: 0 2px 4px oklch(84.82% 0.07618 234.629  / 0.5);
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -150,3 +140,28 @@ h1 {
   justify-content: space-between; 
   align-items: center; 
 }
+
+/*light/dark key*/
+.color-scheme {
+  position: fixed;
+  left: 30px;
+  top: 20px;
+  z-index: 1100;
+
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+  background: color-mix(in oklch, canvas, var(--color-accent) 10%);
+  padding: 0.4em 0.6em;
+  border-radius: 0.5em;
+  border: 1px solid var(--border-color);
+}
+
+.color-scheme select {
+  margin-left: 0.4em;
+  font-size: inherit;
+  background: canvas;
+  color: canvastext;
+  border: 1px solid var(--border-color);
+  border-radius: 0.3em;
+}
+
