@@ -142,3 +142,14 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     containerElement.innerHTML = '<p>No projects available at the moment.</p>';
   }
 }
+
+// --- Fetch GitHub Data ---
+export async function fetchGitHubData(username) {
+  try {
+    return await fetchJSON(`https://api.github.com/users/${username}`);
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
+  }
+}
+
+

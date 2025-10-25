@@ -1,16 +1,19 @@
 [
     {
         "title": "Dark Data: Exploring Power Outage Patterns",
+        "year": "2025",
         "image": "../image/pc3.jpg",
         "description": "Investigated the impact of climate and price on electricity outages using hypothesis testing and a Random Forest Regression model (built with Python/Pandas) to reduce prediction error by 7% and published the actionable results on an interactive webpage for grid resilience policy."
     },
     {
         "title": "Series/DataFrame Implementation Project",
+        "year": "2025",
         "image": "../image/pc4.png",
         "description": "Engineered an object-oriented data manipulation framework in Java, building BST Series and hash table-backed DataFrames using custom data structures (linked lists, BSTs, hash tables) and generics to accelerate Series search from O(n) to O(log n) and enable constant-time DataFrame column retrieval."
     },
     {
         "title": "Taylor Swift Music Analytics & Recommender",
+        "year":" 2024",
         "image": "../image/pc2.jpeg",
         "description": "Constructed a music analytics and recommendation platform using Python, babypandas, and NumPy to explore over 200 songs from Spotify and Genius datasets, merging data, engineering Euclidean distance similarity metrics, and generating visualization dashboards to enhance music discovery and data insights.\n        "
     }

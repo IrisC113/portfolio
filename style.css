@@ -168,3 +168,32 @@ h1 {
   border-radius: 0.3em;
 }
 
+
+/*github*/
+.github-info {
+  margin-top: 2em;
+  padding: 1em;
+  border-top: 1px solid oklch(80% 0.1 200);
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.github-info h2 {
+  color: var(--color-accent, oklch(60% 0.15 250));
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.github-grid dt {
+  grid-row: 1;
+  font-weight: bold;
+}
+
+.github-grid dd {
+  grid-row: 2;
+  margin: 0;
+}
