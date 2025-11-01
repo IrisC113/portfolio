@@ -21,13 +21,13 @@ html {
 }
 
 /*Navigation Bar*/
-nav ul,
-nav li {
+nav ul, nav li {
   display: contents;
 }
 
 nav {
-  position: fixed;
+  position: absolute;
+
   right: 30px;
 
   z-index: 1000;
@@ -137,35 +137,114 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-/*Resume*/
-.header-row {
+.project-text {
   display: flex;
-  justify-content: space-between; 
-  align-items: center; 
+  flex-direction: column;
 }
 
-/*light/dark key*/
-.color-scheme {
-  position: fixed;
-  left: 30px;
-  top: 20px;
-  z-index: 1100;
+.project-year {
+  font-family: Baskerville, serif;
+  font-variant-numeric: oldstyle-nums;
+  font-size: 1em;
+  color: #555;
+  margin-top: 4px;
+}
 
-  font-family: system-ui, sans-serif;
-  font-size: 0.9rem;
-  background: color-mix(in oklch, canvas, var(--color-accent) 10%);
-  padding: 0.4em 0.6em;
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+  display: block;
+  margin-inline: auto;
+}
+
+/*pie*/
+
+.chart-container {
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  gap: 2em; 
+  margin-top: 2em;
+}
+
+.chart-container svg {
+  width: 300px;
+  height: 300px;
+}
+
+.legend {
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid oklch(84.82% 0.07618 234.629 / 0.5);
   border-radius: 0.5em;
-  border: 1px solid var(--border-color);
+  padding: 1em;
+  box-shadow: 0 2px 4px oklch(84.82% 0.07618 234.629  / 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.color-scheme select {
-  margin-left: 0.4em;
-  font-size: inherit;
-  background: canvas;
-  color: canvastext;
-  border: 1px solid var(--border-color);
-  border-radius: 0.3em;
+.legend-item.selected .swatch {
+  background-color: oklch(60% 45% 0);
+}
+
+.legend-item.selected {
+  font-weight: bold;
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: sans-serif;
+}
+
+.legend-item .swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 20%;
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    flex-direction: column;
+  }
+}
+#projects-pie-plot path {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+path.selected {
+  cursor: pointer;
+  fill: oklch(60% 45% 0);
+}
+
+
+/*search*/
+.searchBar {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 

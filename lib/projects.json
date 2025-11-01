@@ -13,8 +13,15 @@
     },
     {
         "title": "Taylor Swift Music Analytics & Recommender",
-        "year":" 2024",
+        "year": "2024",
         "image": "../image/pc2.jpeg",
-        "description": "Constructed a music analytics and recommendation platform using Python, babypandas, and NumPy to explore over 200 songs from Spotify and Genius datasets, merging data, engineering Euclidean distance similarity metrics, and generating visualization dashboards to enhance music discovery and data insights.\n        "
+        "description": "Constructed a music analytics and recommendation platform using Python, babypandas, and NumPy to explore over 200 songs from Spotify and Genius datasets, merging data, engineering Euclidean distance similarity metrics, and generating visualization dashboards to enhance music discovery and data insights."
+    },
+    {
+        "title": "Friends Sitcom Reboot: Strategic Data Analysis",
+        "year": "2024",
+        "image": "../image/pc5.jpeg",
+        "description": "This project supported a reboot strategy by using exploratory data analysis, statistical inference, and bootstrapped estimates to assess 236 episodes, analyzing IMDb scores, dialogue sentiment, and gender distribution to inform casting and narrative decisions and identify top-performing creative contributors and equity gaps."
     }
+
 ]

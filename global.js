@@ -127,13 +127,16 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   }
 
   containerElement.innerHTML = '';
-  
+
   for (const project of projects) {
     const article = document.createElement('article');
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
       <img src="${project.image}" alt="${project.title}">
-      <p>${project.description}</p>
+      <div class="project-text">
+        <p>${project.description}</p>
+        <p class="project-year">${project.year ? project.year : ''}</p>
+      </div>
     `;
     containerElement.appendChild(article);
   }
@@ -142,6 +145,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     containerElement.innerHTML = '<p>No projects available at the moment.</p>';
   }
 }
+
 
 // --- Fetch GitHub Data ---
 export async function fetchGitHubData(username) {
