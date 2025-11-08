@@ -231,13 +231,17 @@ function renderLanguageBreakdown(selection) {
   );
 
   container.innerHTML = '';
-  for (const [language, count] of breakdown) {
-    const proportion = count / lines.length;
-    const formatted = d3.format('.1~%')(proportion);
+  container.innerHTML = ''; 
+for (const [language, count] of breakdown) {
+  const proportion = count / lines.length;
+  const formatted = d3.format('.1~%')(proportion);
 
-    container.innerHTML += `
-      <dt>${language}</dt>
-      <dd>${count} lines (${formatted})</dd>
-    `;
-  }
+  container.innerHTML += `
+    <div class="lang-item">
+      <div class="lang-name">${language.toUpperCase()}</div>
+      <div class="lang-value">${count} lines (${formatted})</div>
+    </div>
+  `;
+}
+
 }

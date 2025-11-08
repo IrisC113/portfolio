@@ -387,3 +387,33 @@ circle.selected {
   margin-top: 10px;
   color: #333;
 }
+
+#language-breakdown {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.lang-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.lang-name {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.05em;
+}
+
+.lang-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 0.25rem;
+}
