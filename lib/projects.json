@@ -1,5 +1,12 @@
 [
     {
+        "title": "Geospatial visualizations - bikewatching",
+        "link": "https://irisc113.github.io/bikewatching/",
+        "year": "2025",
+        "image": "../image/pc6.png",
+        "description": "An experimental project using Mapbox GL JS to create interactive maps and visualize bicycle lanes, bike stations, and traffic flow data. The project also covers building data filtering tools (such as sliders), implementing responsiveness, and performing performance optimizations to ensure the map's usability and smooth operation."
+    },
+    {
         "title": "Dark Data: Exploring Power Outage Patterns",
         "year": "2025",
         "image": "../image/pc3.jpg",

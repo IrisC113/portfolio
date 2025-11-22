@@ -13,17 +13,7 @@
     <div id="stats" class="summary"></div>
 
     <script type="module" src="main.js"></script>
-
-        <div id="time-filter" style="margin-bottom: 1.5rem;">
-        <div style="display: flex; align-items: baseline; gap: 1rem;">
-            <label for="commit-progress">
-                Show commits until:
-            </label>
-            <input type="range" id="commit-progress" min="0" max="100" value="100" style="flex: 1;">
-        </div>
-        
-        <time id="filter-max-time" style="display: block; text-align: right; margin-top: 0.5rem;"></time>
-    </div>
+    
 
     <div id="scrolly-1">
       
@@ -49,8 +39,22 @@
       </div>
 
       <div id="scatter-story">Some filler text here</div>
+      
     </div>
     
     <dl id="files"></dl>
+
+    <div id="time-filter" style="margin-bottom: 1.5rem;">
+        <div style="display: flex; align-items: baseline; gap: 1rem;">
+            <label for="commit-progress">
+                Show commits until:
+            </label>
+            <input type="range" id="commit-progress" min="0" max="100" value="100" style="flex: 1;">
+        </div>
+        
+        <time id="filter-max-time" style="display: block; text-align: right; margin-top: 0.5rem;"></time>
+    </div>
+
+    
 </body>
 </html>
