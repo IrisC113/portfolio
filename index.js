@@ -32,8 +32,12 @@ async function renderGitHubStats(username) {
       console.warn('No #profile-stats container found');
       return;
     }
-
+    
     profileStats.innerHTML = `
+      <div class="github-header">
+        <img src="${githubData.avatar_url}" alt="${githubData.login} GitHub Avatar" class="github-avatar">
+        <h2>${githubData.login}</h2>
+      </div>
       <dl class="github-grid">
         <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
         <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>

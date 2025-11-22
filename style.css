@@ -284,7 +284,35 @@ path.selected {
   margin: 0;
 }
 
-/*meta*/
+.github-header {
+  display: flex; 
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.github-avatar {
+  width: 70px;
+  height: 70px; 
+  border-radius: 50%;
+  margin: 0;
+}
+
+.github-header h2 {
+  margin: 0;
+  font-size: 1.5em; 
+  line-height: 1;
+}
+
+.github-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin: 1em 0;
+  text-align: left;
+}
+
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
