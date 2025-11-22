@@ -159,7 +159,6 @@ h1 {
 }
 
 /*pie*/
-
 .chart-container {
   display: flex; 
   align-items: center;
@@ -174,7 +173,6 @@ h1 {
 }
 
 .legend {
-
   display: flex;
   flex-direction: column;
   gap: 0.6em;
@@ -250,7 +248,6 @@ path.selected {
 
 /*github*/
 #github-profile {
-  
   border: 1px solid oklch(84.82% 0.07618 234.629 / 0.5);
   border-radius: 0.5em;
   padding: 1em;
@@ -343,6 +340,12 @@ dl.info dd {
   border-radius: 0.25em;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   pointer-events: none;
+}
+
+#commit-tooltip {
+  position: fixed !important;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 circle {
@@ -440,6 +443,7 @@ circle.selected {
   border: 1px solid #ccc;
   padding: 10px;
   pointer-events: auto;
+
 }
 
 /*file*/
@@ -483,4 +487,26 @@ circle.selected {
   gap: 0.15em;
   padding-top: 0.6em;
   margin-left: 0;
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+
+  > * {
+    flex: 1;
+  }
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: 50vh;
 }

@@ -1,4 +1,6 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm'
+import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
+
 let hideTimeout;
 let xScale;
 let yScale;
@@ -47,7 +49,8 @@ function processCommits(data) {
       });
 
       return ret;
-    });
+    })
+    .sort((a, b) => d3.ascending(a.datetime, b.datetime));
 }
 
 // Summary
@@ -229,6 +232,30 @@ const commits = processCommits(data);
 renderCommitInfo(data, commits);
 renderScatterPlot(data, commits);
 
+d3.select('#scatter-story')
+  .selectAll('.step')
+  .data(commits)
+  .join('div')
+  .attr('class', 'step')
+  .html(
+    (d, i) => `
+		On ${d.datetime.toLocaleString('en', {
+      dateStyle: 'full',
+      timeStyle: 'short',
+    })},
+		I made <a href="${d.url}" target="_blank">${
+      i > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'
+    }</a>.
+		I edited ${d.totalLines} lines across ${
+      d3.rollups(
+        d.lines,
+        (D) => D.length,
+        (d) => d.file,
+      ).length
+    } files.
+	`,
+  );
+
 timeScale = d3.scaleTime()
   .domain([
     d3.min(commits, d => d.datetime),
@@ -379,9 +406,63 @@ function onTimeSliderChange() {
   renderCommitInfo(data, filteredCommits);
 
   updateFileDisplay(filteredCommits);
+
+  d3.select('#scatter-story')
+  .selectAll('.step')
+  .data(commits)
+  .join('div')
+  .attr('class', 'step')
+  .html(
+    (d, i) => `
+		On ${d.datetime.toLocaleString('en', {
+      dateStyle: 'full',
+      timeStyle: 'short',
+    })},
+		I made <a href="${d.url}" target="_blank">${
+      i > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'
+    }</a>.
+		I edited ${d.totalLines} lines across ${
+      d3.rollups(
+        d.lines,
+        (D) => D.length,
+        (d) => d.file,
+      ).length
+    } files.
+		Then I looked over all I had made, and I saw that it was very good.
+	`,
+  );
+  
 }
 
 document.getElementById("commit-progress")
   .addEventListener("input", onTimeSliderChange);
 
 onTimeSliderChange();
+
+function onStepEnter(response) {
+  const commitMaxTime = response.element.__data__.datetime;
+  
+  const filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
+  
+  updateScatterPlot(data, filteredCommits);
+  renderCommitInfo(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
+
+  const timeEl = document.getElementById("filter-max-time");
+  if (timeEl) {
+     timeEl.textContent = commitMaxTime.toLocaleString("en", {
+        dateStyle: "long",
+        timeStyle: "short"
+     });
+  }
+}
+
+const scroller = scrollama();
+
+scroller
+  .setup({
+    container: '#scrolly-1',
+    step: '#scrolly-1 .step',
+    offset: 0.5, 
+  })
+  .onStepEnter(onStepEnter);
