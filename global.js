@@ -127,11 +127,17 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     return;
   }
 
+  const basePath = typeof BASE_PATH !== 'undefined' ? BASE_PATH : '/';
+
   containerElement.innerHTML = '';
 
   for (const project of projects) {
     const article = document.createElement('article');
 
+    let imageUrl = project.image;
+    if (imageUrl && !imageUrl.startsWith('http')) {
+        imageUrl = `${basePath}${project.image}`; 
+    }
 
     let projectLinkHtml = '';
 
