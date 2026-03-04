@@ -4,7 +4,7 @@
         "link": "https://irisc113.github.io/GlobalWarmingTrends/",
         "year": "2025",
         "image": "../image/pc7.png",
-        "description": "This project is a highly interactive global warming visualization platform built on D3.js, designed to dynamically display global surface temperature trends and regional variations from 2015 to 2030. Through a pan-zoomable map heatmap and time-synchronized national line charts, it enables users to freely switch between raw temperature data and anomaly patterns, facilitating intuitive and detailed analysis of the scale and pace of climate change. Translated with DeepL.com (free version)"
+        "description": "This project is a highly interactive global warming visualization platform built on D3.js, designed to dynamically display global surface temperature trends and regional variations from 2015 to 2030. Through a pan-zoomable map heatmap and time-synchronized national line charts, it enables users to freely switch between raw temperature data and anomaly patterns, facilitating intuitive and detailed analysis of the scale and pace of climate change."
     },
     {
         "title": "Geospatial visualizations - bikewatching",
