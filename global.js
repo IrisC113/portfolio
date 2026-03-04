@@ -11,7 +11,7 @@ const pages = [
   { url: "projects/", title: "Projects" },
   { url: "resume/", title: "Resume" },
   { url: "contact/", title: "Contact" },
-  { url: "meta/", title: "Meta"},
+  { url: "meta/", title: "Meta" },
   { url: "https://github.com/IrisC113", title: "GitHub" },
 ];
 
@@ -47,42 +47,38 @@ for (const p of pages) {
   nav.append(a);
 }
 
-// --- Theme Selector UI ---
-document.body.insertAdjacentHTML(
-  "afterbegin",
-  `
-  <label class="color-scheme">
-    Theme:
-    <select id="theme-select">
-      <option value="light dark">Automatic</option>
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-    </select>
-  </label>
-  `
-);
+// --- Theme Toggle Button ---
+const themes = [
+  { value: "light", icon: "☀️", label: "Light" },
+  { value: "dark", icon: "🌙", label: "Dark" },
+  { value: "light dark", icon: "🌓", label: "Auto" },
+];
 
-const themeSelect = document.getElementById("theme-select");
 const root = document.documentElement;
 
-
-
+let currentThemeIndex = 2; // default: auto
 if ("colorScheme" in localStorage) {
-  const savedScheme = localStorage.colorScheme;
-  root.style.setProperty("color-scheme", savedScheme);
-  themeSelect.value = savedScheme;
-} else {
-
-  root.style.setProperty("color-scheme", "light dark");
-  themeSelect.value = "light dark";
+  const saved = localStorage.colorScheme;
+  const idx = themes.findIndex((t) => t.value === saved);
+  if (idx !== -1) currentThemeIndex = idx;
 }
 
+root.style.setProperty("color-scheme", themes[currentThemeIndex].value);
 
-themeSelect.addEventListener("input", (event) => {
-  const scheme = event.target.value;
-  root.style.setProperty("color-scheme", scheme);
-  localStorage.colorScheme = scheme; 
-  console.log("Color scheme changed to:", scheme);
+const themeBtn = document.createElement("button");
+themeBtn.id = "theme-toggle";
+themeBtn.setAttribute("aria-label", "Toggle theme");
+themeBtn.title = themes[currentThemeIndex].label;
+themeBtn.textContent = themes[currentThemeIndex].icon;
+document.body.appendChild(themeBtn);
+
+themeBtn.addEventListener("click", () => {
+  currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+  const theme = themes[currentThemeIndex];
+  root.style.setProperty("color-scheme", theme.value);
+  localStorage.colorScheme = theme.value;
+  themeBtn.textContent = theme.icon;
+  themeBtn.title = theme.label;
 });
 
 
@@ -91,7 +87,7 @@ const form = document.querySelector("form");
 
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
-  
+
   const data = new FormData(form);
   let params = [];
 
@@ -136,7 +132,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
 
     let imageUrl = project.image;
     if (imageUrl && !imageUrl.startsWith('http')) {
-        imageUrl = `${basePath}${project.image}`; 
+      imageUrl = `${basePath}${project.image}`;
     }
 
     let projectLinkHtml = '';

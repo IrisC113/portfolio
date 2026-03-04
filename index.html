@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shujia Chen: Personal site and portfolio</title>
+    <meta name="description"
+        content="Shujia (Iris) Chen — Data Science student at UC San Diego. Building data-driven solutions with Python, D3.js, and machine learning.">
+    <title>Shujia Chen · Data Science Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="global.js"></script>
     <script type="module" src="./index.js" defer></script>
-
 </head>
+
 <body>
-    
-    <header>
-        <h1>Shujia Chen</h1>
-        <p>Hi, my name is Shujia Chen. Data Science student at UCSD. Welcom to my personal site. </p>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-tagline">Data Science · Visualization</p>
+            <h1>Shujia Iris<span class="accent">Chen</span></h1>
+            <p class="hero-statement">
+                Data Science undergrad at <strong>UC San Diego</strong>, turning complex datasets into
+                actionable insights. I've built interactive D3.js visualizations tracking
+                <strong>global climate trends</strong>, engineered ML models that
+                <strong>reduced prediction error by 7%</strong>, and analyzed
+                <strong>200+ songs</strong> for music recommendation systems.
+            </p>
+        </div>
     </header>
 
     <main>
-        <img src="image/pc1.jpg" alt="A photo of my favorite" width="300" height="300">
-        <p>Stitch is my favorite Disney character. </p>
-
-        <h2>Latest Projects</h2> 
-        <div class="projects">
-        </div>
-
-        <section id="github-profile">
-            <h2>GitHub Stats</h2>
-            <div id="profile-stats">
-                
-            </div>
+        <section class="home-section">
+            <h2>Latest Projects</h2>
+            <div class="projects"></div>
         </section>
 
-
+        <section id="github-profile" class="home-section">
+            <h2>GitHub Stats</h2>
+            <div id="profile-stats"></div>
+        </section>
     </main>
+
+    <footer>
+        <p>© 2025 Shujia Chen · Built with ♥ at UC San Diego</p>
+    </footer>
+
 </body>
+
 </html>
