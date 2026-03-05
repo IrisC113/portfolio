@@ -784,3 +784,269 @@ html {
   transform: scale(1.1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* ─── Language Toggle Button ─── */
+#lang-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 1001;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: color-mix(in oklch, canvas 85%, var(--color-accent) 15%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: inherit;
+  letter-spacing: -0.02em;
+}
+
+#lang-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ─── Geek Style (极客风尚) Chinese Resume ─── */
+.geek-resume {
+  --g-gray-50: #f9fafb;
+  --g-gray-400: #9ca3af;
+  --g-gray-500: #6b7280;
+  --g-bg-primary: #ffffff;
+  --g-text-primary: #111827;
+  --g-text-secondary: #6b7280;
+  --g-accent-medium: #374151;
+  --g-border-primary: #d1d5db;
+  --g-font-size-base: 15px;
+  --g-line-height: 1.4;
+  --g-spacing-xs: 3px;
+  --g-spacing-sm: 4px;
+  --g-spacing-md: 4px;
+  --g-spacing-lg: 8px;
+  --g-spacing-xl: 10px;
+  --g-spacing-xxl: 15px;
+  --g-padding-md: 8px;
+  --g-padding-lg: 15px;
+
+  font-family: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
+  font-size: var(--g-font-size-base);
+  line-height: var(--g-line-height);
+  color: var(--g-text-primary);
+  max-width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .geek-resume {
+    --g-gray-50: #1f2937;
+    --g-text-primary: #f3f4f6;
+    --g-text-secondary: #9ca3af;
+    --g-accent-medium: #d1d5db;
+    --g-border-primary: #4b5563;
+    --g-bg-primary: #111827;
+  }
+}
+
+html[style*="color-scheme: dark"] .geek-resume {
+  --g-gray-50: #1f2937;
+  --g-text-primary: #f3f4f6;
+  --g-text-secondary: #9ca3af;
+  --g-accent-medium: #d1d5db;
+  --g-border-primary: #4b5563;
+  --g-bg-primary: #111827;
+}
+
+html[style*="color-scheme: light"] .geek-resume {
+  --g-gray-50: #f9fafb;
+  --g-text-primary: #111827;
+  --g-text-secondary: #6b7280;
+  --g-accent-medium: #374151;
+  --g-border-primary: #d1d5db;
+  --g-bg-primary: #ffffff;
+}
+
+.geek-resume .g-header {
+  color: var(--g-text-primary);
+  padding: var(--g-padding-md);
+  display: flex;
+  align-items: center;
+  gap: var(--g-spacing-xxl);
+  border-bottom: 1px solid var(--g-border-primary);
+  margin-bottom: 0;
+}
+
+.geek-resume .g-header-content {
+  flex: 1;
+  text-align: left;
+}
+
+.geek-resume .g-header-content h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: var(--g-spacing-xl);
+  line-height: 1.2;
+}
+
+.geek-resume .g-contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--g-spacing-md) 12px;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.geek-resume .g-contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--g-spacing-sm);
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.geek-resume .g-contact-item i {
+  width: 14px;
+  text-align: center;
+  color: var(--g-text-secondary);
+}
+
+.geek-resume .g-contact-item a {
+  color: var(--g-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--g-gray-400);
+  font-weight: 500;
+}
+
+.geek-resume .g-main-content {
+  padding: var(--g-padding-lg) var(--g-padding-lg) var(--g-spacing-lg) var(--g-padding-lg);
+}
+
+.geek-resume .g-section {
+  margin-bottom: var(--g-spacing-sm);
+}
+
+.geek-resume .g-section h2 {
+  color: var(--g-text-primary);
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: var(--g-spacing-md);
+  padding-bottom: var(--g-spacing-xs);
+  border-bottom: 1px solid var(--g-border-primary);
+  position: relative;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.geek-resume .g-section h2 i {
+  margin-right: 6px;
+  color: var(--g-accent-medium);
+}
+
+.geek-resume .g-item {
+  padding: 1px var(--g-spacing-md);
+}
+
+.geek-resume .g-item-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: var(--g-spacing-md);
+  flex-wrap: wrap;
+  gap: var(--g-spacing-xl);
+}
+
+.geek-resume .g-item-title-line {
+  display: flex;
+  align-items: center;
+  gap: var(--g-spacing-md);
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.geek-resume .g-item-date {
+  color: var(--g-text-primary);
+  font-size: 0.85em;
+  white-space: nowrap;
+  opacity: 0.7;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.geek-resume .g-item-content {
+  margin-top: var(--g-spacing-md);
+}
+
+.geek-resume .g-item-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.geek-resume .g-item-content li {
+  margin-bottom: 4px;
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.3;
+}
+
+.geek-resume .g-item-content li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.geek-resume .g-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--g-spacing-md);
+}
+
+.geek-resume .g-skill-category {
+  padding: var(--g-spacing-md);
+  margin-bottom: 4px;
+}
+
+.geek-resume .g-skill-category h3 {
+  color: var(--g-text-primary);
+  margin-bottom: var(--g-spacing-xs);
+  font-weight: 600;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+.geek-resume .g-skill-category h3 i {
+  margin-right: 4px;
+  color: var(--g-accent-medium);
+}
+
+.geek-resume .g-skill-category ul {
+  margin: 0;
+  padding-left: 16px;
+  list-style: none;
+}
+
+.geek-resume .g-skill-category li {
+  position: relative;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.geek-resume .g-skill-category li::before {
+  content: '▸';
+  position: absolute;
+  left: -16px;
+  font-weight: 700;
+}
+
+.geek-resume .g-highlight {
+  font-weight: 600;
+}

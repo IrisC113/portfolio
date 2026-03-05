@@ -1,73 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script type="module" src="../global.js"></script>
 </head>
+
 <body>
 
-    <header class="contact-info">
-        <h1>Shujia (Iris) Chen</h1>
-        <div class="details">
-            <span>(+1)626-329-8658</span>
-            <span class="separator"> • </span>
-            <a href="mailto:shc078@ucsd.edu">shc078@ucsd.edu</a>
-            <span class="separator"> • </span>
-            <span>San Diego, CA</span>
-        </div>
-    </header>
-
-    <main class="resume-body">
-
-        <section class="section">
-            <h2 class="section-title">SUMMARY</h2>
-            <p>Data Science undergraduate who engineered Python-based data pipelines, deployed machine learning models, and visualized complex datasets to drive actionable insights. Analyzed large-scale data using statistical and predictive modeling. Seeking opportunities to deliver data-driven solutions in analytics or software development.</p>
-        </section>
-
-
-        <section class="section">
-            <h2 class="section-title">EDUCATION</h2>
-            <div class="item education-item">
-                <div class="header-row">
-                    <span class="title"><strong>B.S. in Data Science</strong></span>
-                    <span class="duration"><strong>Sep 2024 – Present</strong></span>
-                </div>
-                <div class="header-row">
-                    <span class="subtitle">University of California, San Diego (UCSD), La Jolla, CA</span>
-                </div>
-                <div class="header-row">
-                    <span class="subtitle">Halıcıoğlu Data Science Institute</span>
-                </div>
-                <p class="coursework">
-                    <strong>Coursework:</strong> Econometrics A, Principles Of Data Science, Introduction To Data Science, Theor Fndtns of Data Sci I, DataStrc/Algrthms for Data Sci, Practice Of Data Science, Theor Fndtns of Data Sci II
-                </p>
+    <!-- ===== English Resume ===== -->
+    <div id="resume-en">
+        <header class="contact-info">
+            <h1>Shujia (Iris) Chen</h1>
+            <div class="details">
+                <span>(+1)626-329-8658</span>
+                <span class="separator"> • </span>
+                <a href="mailto:shc078@ucsd.edu">shc078@ucsd.edu</a>
+                <span class="separator"> • </span>
+                <span>San Diego, CA</span>
             </div>
-        </section>
+        </header>
+
+        <main class="resume-body">
+
+            <section class="section">
+                <h2 class="section-title">SUMMARY</h2>
+                <p>Data Science undergraduate who engineered Python-based data pipelines, deployed machine learning
+                    models, and visualized complex datasets to drive actionable insights. Analyzed large-scale data
+                    using statistical and predictive modeling. Seeking opportunities to deliver data-driven solutions in
+                    analytics or software development.</p>
+            </section>
 
 
-        <section class="section">
-            <h2 class="section-title">TECHNICAL SKILLS</h2>
-            <div class="item skills-item">
-                <p>
-                    <strong>Programming Languages:</strong> Python, SQL, HTML/CSS, JavaScript, Java, R
-                </p>
-                <p>
-                    <strong>Libraries:</strong> Pandas, NumPy, D3
-                </p>
-                <p>
-                    <strong>Tools & Platforms:</strong> Excel, Jupyter Notebook, Git, GitHub, VS code, PyCharm, Eclipse, RStudio, SQLift, Blender, RStudio
-                </p>
-                <p>
-                    <strong>Certifications:</strong> Project Management Essentials, Corporate Finance Fundamentals
-                </p>
+            <section class="section">
+                <h2 class="section-title">EDUCATION</h2>
+                <div class="item education-item">
+                    <div class="header-row">
+                        <span class="title"><strong>B.S. in Data Science</strong></span>
+                        <span class="duration"><strong>Sep 2024 – Present</strong></span>
+                    </div>
+                    <div class="header-row">
+                        <span class="subtitle">University of California, San Diego (UCSD), La Jolla, CA</span>
+                    </div>
+                    <div class="header-row">
+                        <span class="subtitle">Halıcıoğlu Data Science Institute</span>
+                    </div>
+                    <p class="coursework">
+                        <strong>Coursework:</strong> Econometrics A, Principles Of Data Science, Introduction To Data
+                        Science, Theor Fndtns of Data Sci I, DataStrc/Algrthms for Data Sci, Practice Of Data Science,
+                        Theor Fndtns of Data Sci II
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="section">
+                <h2 class="section-title">TECHNICAL SKILLS</h2>
+                <div class="item skills-item">
+                    <p>
+                        <strong>Programming Languages:</strong> Python, SQL, HTML/CSS, JavaScript, Java, R
+                    </p>
+                    <p>
+                        <strong>Libraries:</strong> Pandas, NumPy, D3
+                    </p>
+                    <p>
+                        <strong>Tools & Platforms:</strong> Excel, Jupyter Notebook, Git, GitHub, VS code, PyCharm,
+                        Eclipse, RStudio, SQLift, Blender, RStudio
+                    </p>
+                    <p>
+                        <strong>Certifications:</strong> Project Management Essentials, Corporate Finance Fundamentals
+                    </p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- ===== Chinese Resume (极客风尚 Style) ===== -->
+    <div id="resume-cn" class="geek-resume" style="display:none">
+        <header class="g-header">
+            <div class="g-header-content">
+                <h1>陈舒佳</h1>
+                <div class="g-contact-info">
+                    <div class="g-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(+1) 626-329-8658</span>
+                    </div>
+                    <div class="g-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:shc078@ucsd.edu">shc078@ucsd.edu</a>
+                    </div>
+                    <div class="g-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>美国加州圣地亚哥</span>
+                    </div>
+                    <div class="g-contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/IrisC113" target="_blank">GitHub 主页</a>
+                    </div>
+                    <div class="g-contact-item">
+                        <i class="fas fa-university"></i>
+                        <span>加州大学圣地亚哥分校 (UCSD) · 数据科学学士 · 2024.09 - 至今</span>
+                    </div>
+                </div>
             </div>
-        </section>
+        </header>
 
-        
-    </main>
+        <main class="g-main-content">
+            <section class="g-section">
+                <h2><i class="fas fa-user"></i> 个人简介</h2>
+                <div class="g-item">
+                    <div class="g-item-content">
+                        <p>数据科学本科生，擅长构建 <span class="g-highlight">Python 数据管道</span>、部署<span
+                                class="g-highlight">机器学习模型</span>，并将复杂数据集可视化以驱动可行的洞察。具备使用统计与预测建模分析大规模数据的能力。致力于在数据分析或软件开发领域提供数据驱动的解决方案。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="g-section">
+                <h2><i class="fas fa-graduation-cap"></i> 教育背景</h2>
+                <div class="g-item">
+                    <div class="g-item-header">
+                        <div class="g-item-title-line">
+                            <strong>数据科学 理学学士</strong>
+                        </div>
+                        <div class="g-item-date">2024年9月 - 至今</div>
+                    </div>
+                    <div class="g-item-content">
+                        <ul>
+                            <li><strong>院校</strong>：加州大学圣地亚哥分校 (UCSD)，Halıcıoğlu 数据科学研究所</li>
+                            <li><strong>核心课程</strong>：计量经济学 A、数据科学原理、数据科学导论、数据科学理论基础 I/II、数据科学中的数据结构与算法、数据科学实践</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="g-section">
+                <h2><i class="fas fa-cogs"></i> 专业技能</h2>
+                <div class="g-skills-grid">
+                    <div class="g-skill-category">
+                        <h3><i class="fas fa-laptop-code"></i> 编程语言</h3>
+                        <ul>
+                            <li>掌握 <span class="g-highlight">Python</span>、<span class="g-highlight">SQL</span>、<span
+                                    class="g-highlight">JavaScript</span> 等编程语言</li>
+                            <li>熟悉 <span class="g-highlight">HTML/CSS</span>、<span class="g-highlight">Java</span>、<span
+                                    class="g-highlight">R</span></li>
+                        </ul>
+                    </div>
+                    <div class="g-skill-category">
+                        <h3><i class="fas fa-cubes"></i> 框架与库</h3>
+                        <ul>
+                            <li>数据处理：<span class="g-highlight">Pandas</span>、<span class="g-highlight">NumPy</span></li>
+                            <li>数据可视化：<span class="g-highlight">D3.js</span></li>
+                        </ul>
+                    </div>
+                    <div class="g-skill-category">
+                        <h3><i class="fas fa-tools"></i> 工具与平台</h3>
+                        <ul>
+                            <li><span class="g-highlight">Excel</span>、<span class="g-highlight">Jupyter
+                                    Notebook</span>、<span class="g-highlight">Git</span>、<span
+                                    class="g-highlight">GitHub</span></li>
+                            <li><span class="g-highlight">VS Code</span>、<span class="g-highlight">PyCharm</span>、<span
+                                    class="g-highlight">RStudio</span>、<span class="g-highlight">Blender</span></li>
+                        </ul>
+                    </div>
+                    <div class="g-skill-category">
+                        <h3><i class="fas fa-certificate"></i> 资格认证</h3>
+                        <ul>
+                            <li>项目管理基础认证</li>
+                            <li>企业金融基础认证</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ===== Language Toggle Button ===== -->
+    <button id="lang-toggle" aria-label="Toggle language" title="Switch to Chinese">中</button>
+
+    <script>
+        const langToggle = document.getElementById('lang-toggle');
+        const resumeEn = document.getElementById('resume-en');
+        const resumeCn = document.getElementById('resume-cn');
+        let isChinese = false;
+
+        langToggle.addEventListener('click', () => {
+            isChinese = !isChinese;
+            if (isChinese) {
+                resumeEn.style.display = 'none';
+                resumeCn.style.display = 'block';
+                langToggle.textContent = 'EN';
+                langToggle.title = 'Switch to English';
+                document.documentElement.lang = 'zh-CN';
+            } else {
+                resumeCn.style.display = 'none';
+                resumeEn.style.display = 'block';
+                langToggle.textContent = '中';
+                langToggle.title = 'Switch to Chinese';
+                document.documentElement.lang = 'en';
+            }
+        });
+    </script>
 
 </body>
+
 </html>
