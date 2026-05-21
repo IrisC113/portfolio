@@ -1,5 +1,12 @@
 [
     {
+        "title": "Cloud-Based Big Data Pipeline for Amazon Reviews",
+        "link": "", 
+        "year": "2026",
+        "image": "image/",
+        "description": "By using the AWS EC2/S3 and Dask distributed parallel computing framework, a cloud-based Amazon review big data pipeline that can solve the memory bottleneck and support large-scale feature engineering was constructed and optimized."
+    },
+    {
         "title": "Global warming from 2015 to 2030: Interactive visualization maps of trends and regional differences",
         "link": "https://irisc113.github.io/GlobalWarmingTrends/",
         "year": "2025",
